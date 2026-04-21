@@ -12,7 +12,7 @@ def calibrar_robot(*args, **kwargs):
     for key, value in kwargs.items():
         if key == "torque_max" and value > 100:
         
-            print("peligro de sobrecarga")
+            print("peligro de sobrecarga torque_max excede el límite seguro (torque_max > 100)")
 
         else:
             print(f"{key}: {value}")
