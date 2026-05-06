@@ -1,15 +1,11 @@
-configuracion_robot = {
-"velocidad": 50 ,
-"torque_max": 120 ,
-"herramienta": "pinza"
-}
 
-def calibrar_robot(*args, **kwargs):
+def calibrar_robot(*angulos_prueba, **configuracion_robot):
     
-    desplazamiento_total = sum(args)
-    articulaciones_en_movimiento = len(args)
+    desplazamiento_total = sum(angulos_prueba)
+    articulaciones_en_movimiento = len(angulos_prueba)
 
-    for key, value in kwargs.items():
+    print("------Configuración del robot-------")
+    for key, value in configuracion_robot.items():
         if key == "torque_max" and value > 100:
         
             print("peligro de sobrecarga torque_max excede el límite seguro (torque_max > 100)")
@@ -19,9 +15,9 @@ def calibrar_robot(*args, **kwargs):
 
     return desplazamiento_total, articulaciones_en_movimiento
 
-desplazamiento, articulaciones = calibrar_robot(10, 20, 15)
-print("------Resultados de la calibración del robot-------")
+desplazamiento, articulaciones = calibrar_robot(45, 90, -30, 15, velocidad=50, torque_max=120, herramienta="pinza")
+print("------calibración del robot-------")
 print(f"Desplazamiento total: {desplazamiento} unidades")
 print(f"Articulaciones en movimiento: {articulaciones}")
 
-calibrar_robot(velocidad=50, torque_max=120, herramienta="pinza")
+
