@@ -1,4 +1,4 @@
-from Robot_base import RobotBase
+from robot_base import RobotBase
 import random
 
 class RobotTresRuedas(RobotBase):
@@ -8,7 +8,7 @@ class RobotTresRuedas(RobotBase):
         self.radio_rueda = radio_rueda
 
     def calibrar_giro(self):
-        print(f"[{self.nombre()}] Calibrando giro con radio de rueda: {self.radio_rueda} ")
+        print(f"[{self.get_nombre()}] Calibrando giro con radio de rueda: {self.radio_rueda} ")
         self.ruedas_calibradas = True
 
     def mover(self):

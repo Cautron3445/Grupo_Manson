@@ -14,7 +14,7 @@ class RobotBase:
         self.target_x = 5.0
         self.target_y = 5.0
 
-#Este es el constructor que contiene atributos publicos y privados
+# Este es el constructor que contiene atributos públicos y privados
 
     def get_nombre(self):
         return self.__nombre
@@ -34,7 +34,7 @@ class RobotBase:
     def get_basura_recolectada(self):
         return self.__basura_recolectada
 
-#Estos son los getters 
+# Estos son los getters
 
     def _actualizar_pose(self, x, y, yaw):
         self.__pos_x = x
@@ -55,7 +55,7 @@ class RobotBase:
 
         self.__basura_recolectada += cantidad
 
-#Estos son los metodos internos protegidos
+# Estos son los métodos internos protegidos
 
     @staticmethod
     def calc_dist_to_goal(pos_x, pos_y, target_x, target_y):
@@ -69,7 +69,7 @@ class RobotBase:
         error_norm = ((error + math.pi) % (2 * math.pi)) - math.pi
         return error_norm
 
-#metodos estaticos 
+# Métodos estáticos
 
     def step(self, v, w):
         if self.__bateria <= 0:
@@ -92,10 +92,10 @@ class RobotBase:
 #Hasta aca es la simulacion cinematica, el metodo step
 
     def mover(self):
-        raise NotImplementedError("Las clases hijas deben implementar este metodo")
+        raise NotImplementedError("Las clases hijas deben implementar este método")
 
     def limpiar(self):
-        raise NotImplementedError("Las clases hijas deben implementar este metodo")    
+        raise NotImplementedError("Las clases hijas deben implementar este método")    
 
-#Metodos abstractos
-#Fin de la creacion de la clase RobotBase
+# Métodos abstractos
+# Fin de la creación de la clase RobotBase
