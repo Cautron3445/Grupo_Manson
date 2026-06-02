@@ -167,10 +167,6 @@ def principal():
     # Exportar a archivo CSV
     exportar_archivo_csv(tabla_equipo)
     
-    print("\n" + "=" * 70)
-    print("¡Simulador ejecutado exitosamente!")
-    print("=" * 70)
-
 
 if __name__ == "__main__":
     principal()
