@@ -1,9 +1,9 @@
-#Laboratorio 1
+#Laboratorio 1 Ejercicio 1
 #Erick Torres
 #Grupo_Manson
 
-Voltaje = int(input("Ingrese valor del Voltaje en voltios = "))
-Corriente = int(input("Ingrese valor de la Corriente en amperios = "))
+Voltaje = float(input("Ingrese valor del Voltaje en voltios = "))
+Corriente = float(input("Ingrese valor de la Corriente en amperios = "))
 
 Resistencia = Voltaje/Corriente
 Potencia_Disipada = Voltaje*Corriente
